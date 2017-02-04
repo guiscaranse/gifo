@@ -6,7 +6,6 @@
 *.user
 *.userosscache
 *.sln.docstates
-GIFo_latest.exe
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
