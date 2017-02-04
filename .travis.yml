@@ -11,11 +11,11 @@ script:
 - xbuild /p:Configuration=Release GIFo.sln
 before_deploy:
 - mv $TRAVIS_BUILD_DIR/GIFo/bin/Release/GIFo.exe $TRAVIS_BUILD_DIR/GIFo_latest.exe
-- git add GIFo_latest.exe
 deploy:
   provider: releases
   api_key:
     secure: kpcF1q3xUbmF0lwFk1HUZAs/SGDkpjNpRpPiEXcTw6eQvol1lJ70lew6rVUx1YwC5M8gPJKjV3o7c+ltZhfPY/0Y9cl1VGZ1pujzssiN4A5GssjiArKf8INVwuwx/ENLbNAW6jIy6wwMZFR8gLbUkx30TPHZONsIcKBg9vxWIIelaEll/H7cs+11njnK7XPdLErG+RC6vXd5U+dTVYjFgseL4/oawo0YXzJRzvS1gWj5h9uvJlU4rTeR8/lWN3v0lw+wskwUGabReq/TtoQlWRfA5ZImdnIScRmzDxz2/HvMXekhvYdBPWSemcIK+J7H0DnPpKs0PVX3PwR7KCJUrWbauVzJpoD258cgkT9GrdL5RFLaioqInvgsHOsba2Uo3xaVjUXvk3ZINWau4uwKOATQdxX2PjEhpVwZKkxdWZep8a0wJmQY+g5hLRSu9JuPlKFvZ5IhUS5+IzFNdOopx6he46yRG1RfBvD8F3kpzJTL4t0xZSX5V9R6BxSdJC5rwOwk00MTrWCnkWT7Bqyb0iWlOniJW3uD/v6pwX45cD48oiorvFsprsuII6DeY0i+hhDr5u33G6IMcsUCwg4WHveQxwkJ2VsXAN9ik4TK0+oWDJKSNvwm/tLbM9NSK5UafXQhYly12D1NLa4IywIoT2FxoY8pIcqkIuawLbHRJJ8=
   file: $TRAVIS_BUILD_DIR/GIFo_latest.exe
+  skip_cleanup: true
   on:
     repo: guiscaranse/gifo
