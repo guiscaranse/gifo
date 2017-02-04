@@ -3,18 +3,19 @@ solution: GIFo.sln
 dist: trusty
 sudo: required
 mono:
-  - latest
+- latest
 dotnet: 1.0.0-preview2-003121
 install:
-  - nuget restore GIFo.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+- nuget restore GIFo.sln
+- nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
-  - xbuild /p:Configuration=Release GIFo.sln
+- xbuild /p:Configuration=Release GIFo.sln
 deploy:
   provider: releases
-  api_key:
-    secure: X9fnLUh/qKVwtDOFicmHBZN3r0sEnM3kp4st/vjRCuDgTV30pG/0y3kjnbSuRm/Qgw8sgvzD5RlGQ7aHiU6naJnlrAbBeHVs3EECMvRc2zZjeUGCg4Iwtd0rPnvl2X28jOFTOeOM24FP6cqhVK/keilLcTCjB4llTYjbV4FkIqo=
+  user: guiscaranse
   file: GIFo/bin/Release/GIFo.exe
   skip_cleanup: true
   on:
     repo: guiscaranse/gifo
+  password:
+    secure: Qlmjm1vMTF8nXPEH6tPlZf846oF2e3CMiv94tlYnN5ls58q2IXBjeUgz67TpohJAkscii4IkL1C71K8IRCgxzC7bes5E5DfarbIziADdH+NyzBI+mt3OiDsTezddq6n8DcGKDk5NPQfp4nje7vtyc5UZ06k0cZlLFcm03Fyuhp8HcUpG/RKemIUP/tYYR6BEMdQKiqfhn9aLx8ucy3Yvyz6Nu45AVUELo/TkN1W6Y6AdXVO3hUCWbVVr1QEqoAm0GqsRZDzDQJ9zI85MqV4mwuco+zzytjJm/iIuh5QzlvJ6d0XQyw/n9UEjedf6RgUoVIZ0+yXOQRpzDzoLbp38Kzdj7lqV1vM5dCrQqe86KPEU5XNOGdJWOjb+A819UxSdFHaktpj+PpvH2Jxy/Bs6ayx/8vYxfPQVKuAzg8wxQEbEzWa0Z1YzyBMKpLDWtifWicC3wXrP4lf8cV1WXOfFqkMo6EBfFyH8WcnSzPeROpi6ziIV5tup5lM0YdlxSjhWIYEf9anDxqJBt7bG0EQsRBJI4wUTibS79TPQOFttA61Ua8/PFbXbkGr/EwmFW2Huhz/NUMQib4L5WzFiRv2g5tTKiNWTikVZhXLsGo2jwpD8CJICIL02lide6HyYU/mHSYfuqMpUkGtgSoLhORd5Y80EZpUZVmEpJdA91hhVmnw=
