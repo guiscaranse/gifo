@@ -1,0 +1,22 @@
+language: csharp
+solution: GIFo.sln
+matrix:
+  include:
+    - dotnet: 1.0.0-preview2-003121
+      mono: none
+      env: DOTNETCORE=1
+    - mono: latest
+install:
+  - nuget restore GIFo.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release GIFo.sln
+deploy:
+  provider: releases
+  api_key:
+    secure: X9fnLUh/qKVwtDOFicmHBZN3r0sEnM3kp4st/vjRCuDgTV30pG/0y3kjnbSuRm/Qgw8sgvzD5RlGQ7aHiU6naJnlrAbBeHVs3EECMvRc2zZjeUGCg4Iwtd0rPnvl2X28jOFTOeOM24FP6cqhVK/keilLcTCjB4llTYjbV4FkIqo=
+  file: GIFo/bin/Release/apk/GIFo.exe
+  skip_cleanup: true
+  on:
+    repo: guiscaranse/gifo
+    tags: true
