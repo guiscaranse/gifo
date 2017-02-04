@@ -1,11 +1,7 @@
 language: csharp
 solution: GIFo.sln
-matrix:
-  include:
-    - dotnet: 1.0.0-preview2-003121
-      mono: none
-      env: DOTNETCORE=1
-    - mono: latest
+mono: none
+dotnet: 1.0.0-preview2-003121
 install:
   - nuget restore GIFo.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
