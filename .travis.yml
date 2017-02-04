@@ -11,7 +11,7 @@ deploy:
   provider: releases
   api_key:
     secure: X9fnLUh/qKVwtDOFicmHBZN3r0sEnM3kp4st/vjRCuDgTV30pG/0y3kjnbSuRm/Qgw8sgvzD5RlGQ7aHiU6naJnlrAbBeHVs3EECMvRc2zZjeUGCg4Iwtd0rPnvl2X28jOFTOeOM24FP6cqhVK/keilLcTCjB4llTYjbV4FkIqo=
-  file: GIFo/bin/Release/apk/GIFo.exe
+  file: GIFo/bin/Release/GIFo.exe
   skip_cleanup: true
   on:
     repo: guiscaranse/gifo
