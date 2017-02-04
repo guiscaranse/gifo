@@ -7,7 +7,6 @@ mono:
 dotnet: 1.0.0-preview2-003121
 install:
 - nuget restore GIFo.sln
-- nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
 - xbuild /p:Configuration=Release GIFo.sln
 deploy:
