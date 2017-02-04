@@ -10,7 +10,8 @@ install:
 script:
 - xbuild /p:Configuration=Release GIFo.sln
 before_deploy:
-- mv ./GIFo/bin/Release/GIFo.exe ./GIFo_latest.exe
+- mv $TRAVIS_BUILD_DIR/GIFo/bin/Release/GIFo.exe $TRAVIS_BUILD_DIR/GIFo_latest.exe
+- [ -f $TRAVIS_BUILD_DIR/GIFo_latest.exe ] && echo "Found" || echo "Not found"
 deploy:
   provider: releases
   api_key:
