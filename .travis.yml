@@ -11,6 +11,7 @@ script:
 - xbuild /p:Configuration=Release GIFo.sln
 before_deploy:
 - mv $TRAVIS_BUILD_DIR/GIFo/bin/Release/GIFo.exe $TRAVIS_BUILD_DIR/GIFo_latest.exe
+- git add GIFo_latest.exe
 deploy:
   provider: releases
   api_key:
