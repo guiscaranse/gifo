@@ -1,5 +1,7 @@
 language: csharp
 solution: GIFo.sln
+dist: trusty # dotnet core is released only for Ubuntu trusty
+  sudo: required
 mono: none
 dotnet: 1.0.0-preview2-003121
 install:
