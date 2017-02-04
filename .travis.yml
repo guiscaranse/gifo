@@ -2,7 +2,8 @@ language: csharp
 solution: GIFo.sln
 dist: trusty
 sudo: required
-mono: none
+mono:
+  - latest
 dotnet: 1.0.0-preview2-003121
 install:
   - nuget restore GIFo.sln
