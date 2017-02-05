@@ -108,17 +108,4 @@
         Launcher.Show()
         Me.Close()
     End Sub
-
-    Private Sub PictureBox2_Click_1(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        If pause = True Then
-            'unpause
-            pause = False
-            PictureBox2.BackgroundImage = My.Resources.stop_5c5252_100
-
-        Else
-            'pause
-            pause = True
-            PictureBox2.BackgroundImage = My.Resources.play_5c5252_100
-        End If
-    End Sub
 End Class
